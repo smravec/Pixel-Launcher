@@ -108,26 +108,13 @@ class HomeActivity: UIObject, AppCompatActivity(),
     override fun onResume() {
         super.onResume()
 
-        // Applying the date / time format (changeable in settings)
-        val dFormat = getPreferences(this).getInt(PREF_DATE_FORMAT, 0)
-        val upperFMT = resources.getStringArray(R.array.settings_launcher_time_formats_upper)
-        val lowerFMT = resources.getStringArray(R.array.settings_launcher_time_formats_lower)
+        val t = "127.0.0.1"
+        if (binding.homeLowerView.text != t)
+            binding.homeLowerView.text = t
 
-        val dateFormat = SimpleDateFormat(upperFMT[dFormat], Locale.getDefault())
-        val timeFormat = SimpleDateFormat(lowerFMT[dFormat], Locale.getDefault())
-
-
-        clockTimer = fixedRateTimer("clockTimer", true, 0L, 100) {
-            this@HomeActivity.runOnUiThread {
-                val t = timeFormat.format(Date())
-                if (binding.homeLowerView.text != t)
-                    binding.homeLowerView.text = t
-
-                val d = dateFormat.format(Date())
-                if (binding.homeUpperView.text != d)
-                    binding.homeUpperView.text = d
-            }
-        }
+        val d = "simon@pixel4"
+        if (binding.homeUpperView.text != d)
+            binding.homeUpperView.text = d
     }
 
     override fun onPause() {

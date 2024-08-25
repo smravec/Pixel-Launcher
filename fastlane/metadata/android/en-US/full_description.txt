@@ -1,4 +1,4 @@
-µLauncher is a home screen that lets you start other apps using swipe gestures and button presses.
+Launcher is a home screen that lets you start other apps using swipe gestures and button presses.
 It is <b>minimal, efficient and free of distraction</b>.
 
 Your homescreen only displays the date, time and a wallpaper.

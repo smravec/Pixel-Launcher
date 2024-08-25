@@ -2,7 +2,7 @@
 <!--[![][shield-release]][latest-release] -->
 [![][shield-license]][license]
 
-# μLauncher
+# Launcher
 
 This is a fork of [finnmglas's app Launcher][original-repo].
 
